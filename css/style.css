@@ -1,0 +1,79 @@
+.nav{
+    background-color: black;
+    font-family:Arial, Helvetica, sans-serif;
+    color:yellow;
+    padding:20px;
+}
+.menu{
+    padding-top: 10px;
+    display:inline;
+    float:right;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid green; 
+}
+  
+
+h1{
+    display:inline;
+}
+h2{
+    text-align:center;
+}
+a{
+    color: whitesmoke;
+    font-weight:bold;
+    text-decoration: none;
+}
+#llog{
+    /*text-align: center;*/
+    border: 2px solid lightgrey;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 20px;
+    /*align-content: center;*/
+    }
+
+
+#Log{
+    font-family: Copperplate Gothic;
+    background-color: blue;
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+#logb{
+    margin-top:0px ;
+    margin-left:10px ;
+    display:inline;
+    float:right;
+    font-family: Copperplate Gothic;
+    background-color: grey;
+    font-weight: bold;
+    font-size: medium;
+}
+#logo{
+margin-right: 20px;
+}
+input{
+    font-family: Copperplate Gothic;
+}
+body {
+    font-family: Copperplate Gothic;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color:black;
+    color:white;
+    margin-top: auto;
+}

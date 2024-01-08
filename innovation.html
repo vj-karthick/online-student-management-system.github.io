@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:darkgray;">
+    <script>
+    
+        // Array to store student data
+        var students = [];
+
+        // Function to add a new student
+        function addStudent(name, batch, startup) {
+            var student = {
+                name: name,
+                batch: batch,
+                startup: startup
+            };
+            students.push(student);
+           // document.write(`<p>Added student: ${name}</p>`);
+        }
+
+        // Function to display student information
+        function displayStudents() {
+            document.write("<h2>Student List- Start-Up </h2>");
+            for (var i = 0; i < students.length; i++) {
+                document.write(`<p>Name: ${students[i].name}</p>`);
+                document.write(`<p> Batch: ${students[i].batch}</p>`);
+                document.write(`<p>Start Up: ${students[i].startup}</p>`);
+                document.write("<hr>");
+            }
+        }
+
+        // Adding students
+        addStudent("priya","2018-2023", "sibi-Start up");
+        addStudent("samantha", "2014-2018", "spotknack-Start up");
+        addStudent("geetha","2013-2017", "Inovation-plus-Start up");
+        addStudent("sanjay","2018-2023", "extras Start up");
+        addStudent("Priyanka Mohan", "2014 Tech Bro-Start up");
+        addStudent("Aishwaraya","2013-2017", "Buddies-Start up");
+
+
+        // Displaying students
+        displayStudents();
+    
+
+
+</script>
+</body>
+</html>

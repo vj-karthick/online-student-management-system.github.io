@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">SEMESTER RESULTS</h1>
+    <script>
+        // Define a constructor function for creating student objects
+function Student(name, rollNumber, year) {
+  this.name = name;
+  this.rollNumber = rollNumber;
+  this.year = year;
+  this.subjects = {};
+}
+
+// Add methods to the prototype of the Student constructor
+Student.prototype.addSubjectResult = function (subject, marks) {
+  if (!this.subjects[subject]) {
+    this.subjects[subject] = [];
+  }
+  this.subjects[subject].push(marks);
+};
+
+Student.prototype.calculateAverage = function () {
+  let totalMarks = 0;
+  let totalSubjects = 0;
+
+  for (const subject in this.subjects) {
+    const marksArray = this.subjects[subject];
+    for (const marks of marksArray) {
+      totalMarks += marks;
+      totalSubjects++;
+    }
+  }
+
+  return totalSubjects === 0 ? 0 : totalMarks / totalSubjects;
+};
+
+// Create student objects
+const students = [
+  new Student("Alice", "727623BCS23", 1),
+  new Student("Bob", "727622BECE102", 2),
+  new Student("Charlie", "727621BIT103", 3),
+  new Student("David", "727623BEE44", 1),
+  //new Student("Eva", "727622BME33", 2),
+  new Student("Frank", "727621BIT43", 3),
+];
+
+// Add subject results for students
+students[0].addSubjectResult("Math", 85);
+students[0].addSubjectResult("DSA", 78);
+students[1].addSubjectResult("Math", 92);
+students[1].addSubjectResult("PCE", 88);
+students[2].addSubjectResult("OS", 92);
+students[2].addSubjectResult("java", 88);
+students[3].addSubjectResult("Math", 92);
+students[3].addSubjectResult("EEE", 88);
+students[4].addSubjectResult("OS", 92);
+students[4].addSubjectResult("java", 88);
+
+
+// ... and so on for other students
+
+// Display semester results for all students
+students.forEach((student) => {
+  document.writeln(
+    ` <br> ${student.name} (${student.rollNumber}),<br> Year ${student.year }<br>`
+  );
+  for (const subject in student.subjects) {
+    const marksArray = student.subjects[subject];
+    const averageMarks = marksArray.reduce((sum, marks) => sum + marks, 0) / marksArray.length;
+    document.writeln(`${subject}: ${marksArray.join(", ")} <br> (Avg: ${averageMarks.toFixed(2)})`);
+    document.writeln('<br>');
+  }
+  document.writeln('<br>');
+  document.writeln(`Average: ${student.calculateAverage().toFixed(2)}`);
+  document.writeln('<br>');
+});
+
+    </script>
+</body>
+</html>

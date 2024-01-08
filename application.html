@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application</title>
+    <style>
+    .nav{
+        background-color: black;
+        font-family:Arial, Helvetica, sans-serif;
+        color:yellow;
+        padding:20px;
+    }
+    #llog{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color:chocolate;
+        width: 100%;;
+    }
+    #Welcome{
+        font-style: italic;
+        color: blue;
+        text-align: center;
+        font-weight: bolder;
+        font-size: larger;
+    }
+    #scrollup{
+         margin: right 20px; 
+        float: right;
+    }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <a id="Welcome"> LETS GET STARTED </a> <br>
+    <div class="nav">
+        <img src="images/logo.jpg" alt="logo" style="display: inline;" height="30px;">    
+        <h1>Online Student Management System</h1> 
+        </div>
+        <img src="images/application.jpeg" height="270" width="100%">
+        <div id="llog">
+            
+        <form action="fee.html">
+            Student Name: <br>
+            <input type="textbox"  name="username" placeholder="Enter your username"><br><br>
+            Father's Name: <br>
+            <input type="textbox" name="father name" placeholder="Enter your Father's name"><br><br>
+            Mother's Name: <br>
+            <input type="textbox" name="mother name" placeholder="Enter your Mother's name"><br><br>
+            Parent Mobile Nunmber: <br>
+            <input type="number" name="mobile number" placeholder="Enter your mobile number"><br><br>
+            Email: <br>
+            <input type="email" name="email" placeholder="Enter your Emailid"><br> <br>
+            Birthday  : <br>
+            <input type="date" name="birthday"><br><br>
+   	        Gender    :<br>
+   	        <input type="radio" name="Gender" value="Male">Male<br>
+   	        <input type="radio" name="Gender" value="Female">Female<br>
+   	        <input type="radio" name="Gender" value="Others">Others<br>
+            Course:<br> 
+            <input type="textbox" name="course" placeholder="Enter your course "> <br> <br>
+            10 th Mark:<br>
+            <input type="text" name="10th Mark" placeholder="Enter your 10th Mark "> <br> <br>
+            11 th Mark:<br>
+            <input type="text" name="11th Mark" placeholder="Enter your 11th Mark "> <br> <br>
+            12 th Mark:<br>
+            <input type="text" name="12th Mark" placeholder="Enter your 12th Mark "> <br> <br>
+            Cut-off Mark:<br>
+            <input type="text" name="Cut-off Mark" placeholder="Enter your Cut-off Mark "> <br> <br> <br>
+            <div class="center"><input type="submit" id ="Log" value="Apply Now"></div><br><br>
+            <a href="#Welcome"><img id="scrollup"src="images/up.jpg" height="40" width="60"></a>
+            </form>
+            </div>
+            
+        </form>
+    
+</body>
+</html>

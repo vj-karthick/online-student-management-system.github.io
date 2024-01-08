@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>info</title>
+    <style>
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+    </style>
+</head>
+<body style="background-color: darkkhaki;">
+    <script>
+        var name;
+        var hoobies;
+        window.alert("You have successfully logged in!")
+        name=window.prompt("Which stream are you interested in ?");
+        hobbies=window.prompt("what are your hobbies?");
+
+        document.writeln("<h2> <i> Your entered details are </h2> </i>")
+        document.writeln("<h3> <i> You are Entuisatic learner interested in </i> </h3>" + "<h3> <i>" +  name  + "</h3></i>");
+        document.writeln("<h3> <i> Your hobbies are </i> </h3>" + "<h3> <i>" +  hobbies  + "</h3></i>");
+        
+    </script>
+
+<p style="font-family: Arial, Helvetica, sans-serif; font-style: calc(); font-weight: bold;">Click the button to choose your favorite Course.</p>
+
+<button onclick="myFunction()" style="background-color: rgb(244, 248, 4);">Try it</button>
+
+<p id="demo"></p>
+
+    <script>
+        
+function myFunction() {
+  let text;
+  let favcourse = prompt("What's your favorite course?", "DSA");
+  switch(favcourse) {
+    case "DSA":
+      text = "Excellent choice.Data Structures and Algorithm is a great course .";
+      break;
+    case "Database":
+      text = "DataBase is my favorite too!";
+      break;
+    case "Operating Systems":
+      text = "Operating System is a very great course for network engineers";
+      break;
+    default:
+      text = "A fundamental course,Everyone needs to get to know about it";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+
+
+
+    </script>
+    <em><h1 style="background-color: chartreuse; color:black;">STUDENTS PLACED IN TOP IT COMPANIES</h1></em>
+    <table style="width:70% ;">
+        <tr>
+            <th colspan="2">Name</th>
+            <th>Companies</th>
+        </tr>
+        <tr>
+            <td>vijay</td>
+            <td>smith</td>
+            <td>TCS</td>
+        </tr>
+        <tr>
+            <td>kumar</td>
+            <td>ramesh</td>
+            <td>Infosys</td>
+        </tr>
+    </table>
+    <em><h1 style="background-color: chartreuse; color:black;">CONTACT YOUR ALUMNI </h1></em>
+    <table width="100%">
+        <tr>
+            <td><img src="images/OIP.jpeg" height="200" weight="1500"></td>
+            <td><strong><h2>vijay</h2></strong>
+                <h4>Web Developer</h4>
+                <p>Very Enthuisatic Learner,who studied MCET,2017-2021 batch and get placed at zoho after completing his studies</p>
+            </td>
+        </tr>
+    </table>
+    <br><br><br>
+    <table width="100%">
+        <tr>
+            <th>Name</th>
+            <td>Vijay</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Phone Number</th>
+            <td>9987564590</td>
+        </tr>
+        <tr>
+            <td>8890669960</td>
+        </tr>
+        <tr>
+            <th rowspan="2">E-Mail</th>
+            <td>abv@gmail.com</td>
+        </tr>
+        <tr>
+            <td>ref@gmail.com</td>
+        </tr>
+    </table>
+    <br>
+        <a href="innovation.html"><button style="background-color: blue;color: antiquewhite;width:70%s ;">VIEW YOUR ALUMUNI'S INNOVATION</button></a>
+        <a href="result.html"><button style="background-color: blue;color: antiquewhite;width:70%s ;">VIEW TOP PERFORMERS IN SEMESTER EXAMS</button></a>
+</body>
+</html>

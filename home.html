@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #hr{
+            flex-direction: row;
+            width: 100%;
+        }
+        #h11{
+            font-style:italic; 
+            text-align:center;
+            font-weight:bold;
+            font-family: Arial, Helvetica, sans-serifS;
+            
+        }
+    </style>
+
+</head>
+<body style="font-family: 'Times New Roman', Times, serif; background-color:darkgray;">
+    <div class="nav">
+        <img src="images/logo.jpg" alt="logo" style="display: inline;" height="30px;">    
+        <h1>Online Student Management System</h1> 
+        </div><br>
+    <h1 id="h11">Welcome!</h1>  
+    <hr id="hr" >
+    <h2>COURSES OFFERED</h2>  
+    <ul>
+        <li>Computer Science and Engineering</li>
+        <li>Artificial Intelligence</li>
+        <li>Electronics and Communication Engineering</li>
+        <li>Cyber Security</li>
+        <li>Information Technology</li>
+    </ul> 
+    <hr id="hr" >
+    <h2>CO CURRICULAR AND EXTRA CURRICULAR </h2>
+    <ol>
+        <li>Sports</li>
+        <li>Ncc</li>
+        <li>Clubs</li>
+        <ul>
+            <li>Photography</li>
+            <li>Readers Park</li>
+            <li>Smt</li>
+        </ul>
+    </ol>
+    <script>
+        // Sample student data
+const students = [
+  { name: 'Alice', department: 'Computer Science', score: 95 },
+  { name: 'Bob', department: 'Information Technology', score: 85 },
+  { name: 'Carol', department: 'Computer Science', score: 90 },
+  { name: 'David', department: 'Information Technology', score: 88 },
+  { name: 'Eve', department: 'ECE', score: 92 },
+  { name: 'Frank', department: 'ECE', score: 87 }
+];
+
+// Create an object to store top-performing students by department
+const topStudentsByDepartment = {};
+
+// Find top students in each department
+for (const student of students) {
+  const { department, score } = student;
+  
+  // If the department doesn't exist in the object, create it
+  if (!topStudentsByDepartment[department]) {
+    topStudentsByDepartment[department] = student;
+  } else {
+    // Compare scores to find the top student
+    if (score > topStudentsByDepartment[department].score) {
+      topStudentsByDepartment[department] = student;
+    }
+  }
+}
+
+// Print the top-performing students by department
+for (const department in topStudentsByDepartment) {
+  const student = topStudentsByDepartment[department];
+  document.write(`<b>Top student in ${department}\n: ${student.name} (Score: ${student.score})</b>`);
+}
+
+
+document.writeln('\n');
+
+
+var it=1;
+var core=0;
+
+document.writeln("Which one is better Stream IT or Core? </br>")
+if(it>core)
+{
+    document.writeln('IT Steam is Ruling the world').style.color="red";
+}
+</script>
+    <footer style="font-family:Arial, Helvetica, sans-serif"> M.karthick &copy; 2023 <br> <br> All Rights Reserved</footer>
+</body>
+</html>
